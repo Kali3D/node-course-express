@@ -34,6 +34,11 @@ app.get("/bad", (request, response) => {
 	response.send({errorMessage: "Unable to handle this request"});
 })
 
+app.get("/projects", (request, response) => {
+	response.render("projects.hbs", {
+		title: "Projects Portfolio"
+	});
+})
 
 
 app.listen(port, () => {
